@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
-const controllersNumber = require('../controllers/controllersNumber');
+const teacherControllers = require('../controllers/teacherControllers');
 
 // Rota POST para '/teacher'
-router.post('/teacher/', controllersNumber.postTeacher);
-router.get('/teacher/', controllersNumber.getTeacher);
+router.post('/teacher/', teacherControllers.postTeacher);
+router.get('/teacher/', teacherControllers.getTeacher);
 module.exports = router

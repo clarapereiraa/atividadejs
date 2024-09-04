@@ -1,4 +1,6 @@
 const express = require('express')
+const router = express.Router();
+const { checkPar, checkImpar } = require('./controllerNumbers');
 
 class AppController{
     constructor(){
@@ -16,7 +18,7 @@ class AppController{
    
     routes(){
         const apiRoutes = require('./routes/apiRoutes');
-        this.express.use('/project-senai/api/v1/',apiRoutes);
+        this.express.use('/controlenumeros/api/v1/',apiRoutes);
        
         this.express.get('/health/',(req,res) => 
             {res.send({ status: "OK" });
